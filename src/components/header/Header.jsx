@@ -1,10 +1,16 @@
 import React from 'react';
 import styles from './Header.module.css';
 
+import { Row, Col } from 'react-bootstrap';
+
 function Header(props) {
   return (
     <div className={styles.header}>
-      <h1>HEADER</h1>
+      <Row>
+        <Col>
+          ELEMENTOS DE LA CIRCUNFERENCIA
+        </Col>
+      </Row>
     </div>
   )
 }

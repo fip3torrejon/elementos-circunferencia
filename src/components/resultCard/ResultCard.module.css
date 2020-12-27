@@ -1,4 +1,12 @@
 .resultCard {
   background-color: khaki;
-  padding: 5px;
+  padding: 10px;
+  border-radius: 15px;
+  margin:5px;
+}
+
+.result {
+  background-color: khaki;
+  font-size: 200%;
+  max-width: 100%;
 }

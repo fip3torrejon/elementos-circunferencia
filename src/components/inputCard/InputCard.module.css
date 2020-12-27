@@ -1,0 +1,15 @@
+.inputCard {
+  background-color: greenyellow;
+  padding: 10px;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+.input,
+.input:focus {
+  background-color: greenyellow;
+  border: none;
+  outline: none;
+  font-size: 300%;
+  max-width: 100%;
+}

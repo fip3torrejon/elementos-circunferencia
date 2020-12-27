@@ -1,12 +1,21 @@
 import React from 'react';
+import { Row, Col } from 'react-bootstrap';
 import styles from './ResultCard.module.css';
 
 function ResultCard(props) {
   return(
-    <div className={styles.resultCard}>
-      <h3>{props.title}</h3>
-      <p className={styles.result}>{props.value}</p>
-    </div>
+    <Col xs={10} sm={2} className={styles.resultCard}>
+      <Row>
+        <Col>{props.name}</Col>
+      </Row>
+      <Row>
+        <Col className="text-center">
+          <div className={styles.result}>
+            {props.value}
+          </div>
+        </Col>
+      </Row> 
+    </Col>
   )
 }
 

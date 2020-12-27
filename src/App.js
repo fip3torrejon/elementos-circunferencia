@@ -1,9 +1,10 @@
-import Container from './components/container/Container'
+import Box from './components/box/Box';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <div className="App">
-      <Container />
+      <Box />
     </div>
   );
 }
