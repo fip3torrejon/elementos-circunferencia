@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import styles from './Form.module.css';
 
-import Button from '../button/Button.jsx';
 import InputCard from '../inputCard/InputCard.jsx';
 
 import { Row, Col } from 'react-bootstrap';
@@ -27,9 +26,6 @@ class Form extends Component {
                 name="angulo"
                 value={this.props.angulo}
                 placeholder="0" />
-            </Row>
-            <Row noGutters="true" className="justify-content-center">
-              <Button title="calcular" />
             </Row>
           </form>
         </Col>
