@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import styles from './ResultsBox.module.css';
 
 import ResultCard from '.././resultCard/ResultCard'
@@ -21,6 +22,16 @@ class ResultsBox extends Component {
       </div>
     )    
   }
+
 }
 
-export default ResultsBox;
+
+
+const mapStateToProps = state => {
+  return {
+    radio: state.radio,
+    angulo: state.angulo
+  }
+}
+
+export default connect(mapStateToProps, null)(ResultsBox);

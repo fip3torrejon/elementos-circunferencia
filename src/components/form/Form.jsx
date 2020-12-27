@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import styles from './Form.module.css';
 
 import Button from '../button/Button.jsx';
@@ -18,8 +19,14 @@ class Form extends Component {
         <Col>
           <form onSubmit={this.submitHandler} className={styles.form}>
             <Row className="justify-content-around">
-              <InputCard name="radio" placeholder="0" />
-              <InputCard name="angulo" placeholder="0" />
+              <InputCard
+                name="radio"
+                value={this.props.radio}
+                placeholder="0" />
+              <InputCard
+                name="angulo"
+                value={this.props.angulo}
+                placeholder="0" />
             </Row>
             <Row noGutters="true" className="justify-content-center">
               <Button title="calcular" />
@@ -31,4 +38,11 @@ class Form extends Component {
   }
 }
 
-export default Form;
+const mapStateToProps = state => {
+  return{
+    radio: state.radio,
+    angulo: state.angulo
+  }
+}
+
+export default connect(mapStateToProps, null)(Form);

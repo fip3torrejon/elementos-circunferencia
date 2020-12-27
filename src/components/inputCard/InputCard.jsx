@@ -16,6 +16,7 @@ function InputCard(props){
             type="text"
             placeholder={props.placeholder}
             className={`${styles.input} text-center`}
+            value={props.value}
           />
         </Col>
       </Row> 
