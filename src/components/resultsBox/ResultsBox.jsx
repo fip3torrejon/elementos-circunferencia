@@ -22,10 +22,7 @@ class ResultsBox extends Component {
       </div>
     )    
   }
-
 }
-
-
 
 const mapStateToProps = state => {
   return {

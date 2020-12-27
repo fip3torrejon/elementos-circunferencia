@@ -9,7 +9,7 @@ import { Row, Col } from 'react-bootstrap';
 
 class Form extends Component {
 
-  submitHandler(e) {
+  handleSubmit(e) {
     e.preventDefault();
   }
 
@@ -17,7 +17,7 @@ class Form extends Component {
     return (
       <Row noGutters="true" className={styles.form}>
         <Col>
-          <form onSubmit={this.submitHandler} className={styles.form}>
+          <form onSubmit={this.handleSubmit} className={styles.form}>
             <Row className="justify-content-around">
               <InputCard
                 name="radio"
@@ -44,5 +44,6 @@ const mapStateToProps = state => {
     angulo: state.angulo
   }
 }
+
 
 export default connect(mapStateToProps, null)(Form);
