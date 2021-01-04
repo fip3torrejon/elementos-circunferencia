@@ -8,12 +8,16 @@ import { Row, Col } from 'react-bootstrap';
 function InputCard(props){
 
   const handleChange = (e) => {
-    if(props.name === "radio"){
-      props.setRadio( parseInt(e.target.value) )
-    } else if(props.name === "angulo"){
-      props.setAngulo( parseInt(e.target.value) )
-    }
     
+    if(e.target.value === ""){
+      e.target.value = 0;
+    };
+    
+    if(props.name === "radio"){
+      props.setRadio( parseFloat(e.target.value) )
+    } else if(props.name === "angulo"){
+      props.setAngulo( parseFloat(e.target.value) )
+    }
   }
   
   return(
